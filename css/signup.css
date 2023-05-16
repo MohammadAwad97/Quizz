@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Recursive:wght@300;400;500;600;700;800;900&family=Rufina&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Recursive", sans-serif;
+}
+
+:root {
+  --container-forms: rgb(203 238 255 / 47%);
+  --input: rgb(252, 252, 252);
+  --text: rgb(252, 252, 252);
+  --btn-quiz: rgb(0, 139, 209);
+  --btn-quiz-text: rgb(255, 255, 255);
+  --btn-bold: 700;
+  --nav-footer: rgb(203 238 255 / 47%);
+  --btn: rgb(0, 139, 209);
+}
+
+body {
+  background-color: rgb(0, 139, 209);
+}
+
+/*---------- Start Nav -------------------*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70vw;
+  background-color: var(--nav-footer);
+  padding: 5px 30px;
+  border-radius: 15px;
+  margin: 4px;
+}
+
+.Logo {
+  width: 50px;
+  cursor: pointer;
+}
+.continer-log {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signUp,
+.login {
+  width: 80px;
+  height: 40px;
+  margin: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signUp {
+  background-color: rgb(0, 139, 209);
+  border-radius: 20px 0 0 20px;
+  color: var(--text);
+}
+
+.login {
+  background-color: rgb(201, 221, 231);
+  border-radius: 0 20px 20px 0;
+  color: #686868;
+}
+
+a {
+  font-weight: 400;
+  text-decoration: none;
+}
+/*----------End Nav -------------------*/
+
+/*----------Start form -------------------*/
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  height: 76vh;
+}
+.continer {
+  width: 70vw;
+  background-color: var(--container-forms);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  padding: 0 0 0 35px;
+}
+.continer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.continer img {
+  width: 370px;
+  height: 300px;
+}
+
+h2 {
+  text-align: center;
+  color: var(--text);
+}
+
+label {
+  margin-top: 20px;
+  color: var(--text);
+}
+
+input {
+  width: 270px;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  padding: 0 10px;
+}
+#Register {
+  width: 100px;
+  margin: auto;
+  height: 35px;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  color: var(--text);
+  cursor: pointer;
+}
+/*----------End form -------------------*/
+
+/*----------Start footer -------------------*/
+
+footer {
+  background-color: var(--nav-footer);
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px auto;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+h4 {
+  color: var(--text);
+}
+/*----------End footer -------------------*/
+
+@media (max-width: 912px) {
+  .continer {
+    flex-direction: column;
+    padding: 30px;
+  }
+  main {
+    height: 90vh;
+  }
+  .continer img {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media (max-width: 560px) {
+  h4 {
+    font-size: 10px;
+  }
+  input {
+    width: 160px;
+    height: 35px;
+  }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .continer img {
+    width: 240px;
+  }
+}
+
+@media (max-width: 420px) {
+  main {
+    height: 100vh;
+    background-color: black;
+  }
+  .continer img {
+    width: 175px;
+    height: 170px;
+  }
+}
