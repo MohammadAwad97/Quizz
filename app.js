@@ -24,6 +24,14 @@ export class Users {
 let arr = JSON.parse(localStorage.getItem("Users")) || [];
 
 export function register(email, Password, rePassword) {
+  document.getElementById("PasswordReg").style.backgroundColor = "white";
+  document.getElementById("RePassword").style.backgroundColor = "white";
+  document.getElementById("EmailLabelReg").textContent = "Email";
+  document.getElementById("EmailLabelReg").style.color = "white";
+  document.getElementById("EmailReg").style.backgroundColor = "white";
+  document.getElementById("PasswordLabelReg").textContent = "password";
+  document.getElementById("PasswordLabelReg").style.Color = "white";
+  document.getElementById("RegForm").textContent = "";
   if (
     email.trim() !== "" &&
     Password.trim() !== "" &&
@@ -35,7 +43,7 @@ export function register(email, Password, rePassword) {
           if (arr.length > 0) {
             for (let i = 0; i < arr.length; i++) {
               if (email === arr[i].Email) {
-                let wrong = document.createElement("div");
+                let wrong = document.createElement("span");
                 wrong.textContent = "The email is already exist";
                 wrong.style.cssText =
                   "width:100%; color:red;text-align:center;margin-top:10px;";
@@ -53,7 +61,7 @@ export function register(email, Password, rePassword) {
           console.log("sa/***/////");
           localStorage.setItem("Users", JSON.stringify(arr));
         } else {
-          let wrong = document.createElement("div");
+          let wrong = document.createElement("span");
           wrong.textContent = " The Password doesn't match ";
           wrong.style.cssText =
             "width:100%; color:red;text-align:center;margin-top:10px;";
